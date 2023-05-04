@@ -13,6 +13,9 @@
     <Compile Update="View\Authorization\AuthorizationForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\CarItemView\CarItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\MainPage\MainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -34,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Authorization\AuthorizationForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CarItemView\CarItem.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\MainPage\MainPage.xaml">

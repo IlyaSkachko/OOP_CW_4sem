@@ -33,3 +33,5 @@ C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-
 C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\NavUserControl\MainNav.g.cs
 C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\MainPage\MainPage.baml
 C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\NavUserControl\MainNav.baml
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\CarItemView\CarItem.g.cs
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\CarItemView\CarItem.baml

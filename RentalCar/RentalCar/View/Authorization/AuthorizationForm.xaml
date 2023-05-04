@@ -23,7 +23,7 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Style="{DynamicResource AllBtns}" Cursor="Hand"  x:Name="Enter" Width="150" Height="40" BorderBrush="#09D397" Background="#09D397" Foreground="White" Content="Войти" FontSize="20" Margin="0 54 0 0" HorizontalAlignment="Left"/>
+                <Button Grid.Column="0" Command="{Binding OpenMainPageCommand}" Style="{DynamicResource AllBtns}" Cursor="Hand"  x:Name="Enter" Width="150" Height="40" BorderBrush="#09D397" Background="#09D397" Foreground="White" Content="Войти" FontSize="20" Margin="0 54 0 0" HorizontalAlignment="Left"/>
                 <Button x:Name="RegistrationBtn" Command="{Binding OpenRegistrationCommand}" Grid.Column="1" Content="Регистрация" Cursor="Hand"  FontSize="16" BorderBrush="Transparent" Background="Transparent" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 8" />
                 <Button x:Name="ForgotPassword" Grid.Column="2" Content="Забыли пароль?" Cursor="Hand"  FontSize="16" VerticalAlignment="Bottom" BorderBrush="Transparent" Background="Transparent" HorizontalAlignment="Center" Margin="0 0 0 8"/>
             </Grid>

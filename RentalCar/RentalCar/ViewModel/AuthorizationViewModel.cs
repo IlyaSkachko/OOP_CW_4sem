@@ -1,4 +1,5 @@
 ﻿using RentalCar.Commands;
+using RentalCar.View.MainPage;
 using RentalCar.View.Registration;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace RentalCar.ViewModel
     {
 
         private readonly ICommand _openRegistrationCommand;
+        private readonly ICommand openMainPageCommand;
         private NavigationService _navigationService;
 
         public ICommand OpenRegistrationCommand
@@ -24,14 +26,25 @@ namespace RentalCar.ViewModel
             get { return _openRegistrationCommand; }
         }
 
-        public AuthorizationViewModel() 
+        public ICommand OpenMainPageCommand
         {
-            _openRegistrationCommand = new RelayCommand(Navigate);
+            get { return openMainPageCommand; }
         }
 
-        private void Navigate()
+        public AuthorizationViewModel() 
+        {
+            _openRegistrationCommand = new RelayCommand(OpenRegistration);
+            openMainPageCommand = new RelayCommand(OpenMainPage);
+        }
+
+        private void OpenRegistration()
         {
             Application.Current.MainWindow.Content = new RegistrationPage();
+        }
+
+        private void OpenMainPage()
+        {
+            Application.Current.MainWindow.Content = new MainPage();
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

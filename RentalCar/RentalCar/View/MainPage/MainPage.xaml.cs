@@ -24,5 +24,6 @@ namespace RentalCar.View.MainPage
         {
             InitializeComponent();
         }
+
     }
 }
