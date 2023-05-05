@@ -402,8 +402,8 @@
             </Style.Setters>
         </Style>
     </Page.Resources>
-    
-    <DockPanel Background="White">
+
+    <DockPanel>
         <nav:MainNav DockPanel.Dock="Top" Height="70" VerticalAlignment="Top" Margin="20 20 0 0"/>
         <Border DockPanel.Dock="Left" Padding="40 30 40 0" Margin="30 28 0 10" BorderThickness="2" BorderBrush="#09D397" CornerRadius="10" Width="350">
             <StackPanel>
@@ -413,8 +413,8 @@
                 </Slider>
                 <TextBlock Text="{Binding ElementName=PriceSlider, Path=Value}" HorizontalAlignment="Right" FontSize="18"/>
                 <TextBlock Text="Мощность (л.с.)" FontSize="20" Margin="0 45 0 0"/>
-                <TextBox Style="{DynamicResource TextBoxStyle}" x:Name="PowerCar" BorderThickness="2" BorderBrush="#09D397" Height="35" Margin="0 10 0 0" />
-                <TreeView Style="{DynamicResource TreeViewStyle}"  Margin="0 36 0 0">
+                <TextBox Style="{DynamicResource TextBoxStyle}" x:Name="PowerCar" BorderThickness="2" BorderBrush="#09D397" Height="35" Margin="0 10 0 0" FontSize="16" VerticalContentAlignment="Center" />
+                <TreeView Background="Transparent" BorderThickness="0"  Margin="0 36 0 0">
                     <TreeViewItem Header="Кузов" FontSize="20">
                         <CheckBox Style="{DynamicResource CheckBoxStyle}" Content="Седан" FontSize="18" VerticalContentAlignment="Center" />
                         <CheckBox Content="Кабриолет" Style="{DynamicResource CheckBoxStyle}" FontSize="18" VerticalContentAlignment="Center" />

@@ -13,19 +13,28 @@
     <Compile Update="View\Authorization\AuthorizationForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\CarItemView\CarItem.xaml.cs">
+    <Compile Update="View\CarPage\CarInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\CarPage\CarPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\UserControls\CarItemView\CarItem.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\MainPage\MainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="View\NavUserControl\MainNav.xaml.cs">
+    <Compile Update="View\UserControls\NavUserControl\Client\MainNav.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\Registration\RegistrationForm.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\Registration\RegistrationPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\UserControls\NavUserControl\Client\OtherNav.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -39,19 +48,28 @@
     <Page Update="View\Authorization\AuthorizationForm.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\CarItemView\CarItem.xaml">
+    <Page Update="View\CarPage\CarInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\CarPage\CarPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\CarItemView\CarItem.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\MainPage\MainPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="View\NavUserControl\MainNav.xaml">
+    <Page Update="View\UserControls\NavUserControl\Client\MainNav.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Registration\RegistrationForm.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Registration\RegistrationPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\NavUserControl\Client\OtherNav.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
