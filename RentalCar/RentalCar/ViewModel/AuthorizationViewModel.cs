@@ -1,4 +1,5 @@
 ﻿using RentalCar.Commands;
+using RentalCar.DataBase;
 using RentalCar.View.MainPage;
 using RentalCar.View.Registration;
 using System;
@@ -20,6 +21,10 @@ namespace RentalCar.ViewModel
         private readonly ICommand _openRegistrationCommand;
         private readonly ICommand openMainPageCommand;
         private NavigationService _navigationService;
+
+
+        public string Login { get; set; }
+        public string Password { get; set; }    
 
         public ICommand OpenRegistrationCommand
         {
@@ -44,7 +49,25 @@ namespace RentalCar.ViewModel
 
         private void OpenMainPage()
         {
-            Application.Current.MainWindow.Content = new MainPage();
+            using (var context = new MyDBContext())
+            {
+                var user = context.Profiles.Where(profile => profile.Login.Equals(Login)).FirstOrDefault();
+                if (user != null) 
+                {
+                    if (user.Password == Password) 
+                    {
+                        Application.Current.MainWindow.Content = new MainPage();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Неверно введён пороль!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Такого аккаунта не существует!");
+                }
+            }
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

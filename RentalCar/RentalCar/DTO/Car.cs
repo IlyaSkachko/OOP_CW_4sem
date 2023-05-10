@@ -19,7 +19,7 @@ namespace RentalCar.DTO
         public int Capacity { get; set; }
         public float FuelConsumption { get; set; }
         public int Price { get; set; }
-        public byte[] Photo { get; set; }
+        public string Photo { get; set; }
 
         public virtual ICollection<RentalApplications> RentalApplications { get; set; }
     }

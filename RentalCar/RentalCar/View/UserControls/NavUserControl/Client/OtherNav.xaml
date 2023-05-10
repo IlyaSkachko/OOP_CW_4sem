@@ -90,11 +90,8 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DockPanel Grid.Column="0">
-            <Image x:Name="Logo" Source="C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\LogoLight.png" HorizontalAlignment="Center" Margin="0,10,0,10" Width="194"/>
-            <Button x:Name="MainItem" Content="Главная" VerticalAlignment="Top" Background="Transparent" BorderThickness="0" HorizontalAlignment="Center" FontSize="25" Margin="60,17,0,0" Height="43" />
-            <Button x:Name="AboutUsIItem"  Content="О нас" VerticalAlignment="Top" Background="Transparent" BorderThickness="0" FontSize="25" Margin="0,17,100,0" Height="43" Width="70" />
-        </DockPanel>
+
+        <Image x:Name="Logo" Grid.Column="0" Source="C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\LogoLight.png" HorizontalAlignment="Left" Margin="0,10,0,10" Width="194"/>
         <Button Template="{DynamicResource ButtonTemplate1}" Width="70" Grid.Column="1" Margin="0 0 20 10" Background="Transparent" BorderBrush="#222" BorderThickness="1" HorizontalAlignment="Right">
             <Image  Width="60" Height="50">
                 <Image.Source>

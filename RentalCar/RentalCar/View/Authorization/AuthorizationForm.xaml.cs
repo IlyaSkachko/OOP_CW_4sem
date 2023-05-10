@@ -24,8 +24,6 @@ namespace RentalCar.View
         public AuthorizationForm()
         {
             InitializeComponent();
-            var s = this;
-            var nav = NavigationService.GetNavigationService(this);
         }
 
     }
