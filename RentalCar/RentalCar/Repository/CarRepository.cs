@@ -293,5 +293,24 @@ namespace RentalCar.Repository
 
             return id;
         }
+
+        public ObservableCollection<CarItemModel> SearchRentalCar(int carId)
+        {
+            ObservableCollection<CarItemModel> carItems = new ObservableCollection<CarItemModel>(); 
+
+            using (var context = new MyDBContext())
+            {
+                var list = context.Cars.Where(car => car.Id == carId);
+
+                if (list.Any())
+                {
+                    foreach (var item in list)
+                    {
+                        carItems.Add(Create(item));
+                    }
+                }
+                return carItems;
+            }
+        }
     }
 }

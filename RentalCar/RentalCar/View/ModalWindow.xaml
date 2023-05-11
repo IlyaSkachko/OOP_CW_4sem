@@ -33,6 +33,6 @@
             <TextBlock Text="Введите срок аренды"/>
             <TextBox Text="{Binding RentalPeriod}" Width="150" Height="30" Margin="20"/>
         </StackPanel>
-        <Button Grid.Row="2" Command="{Binding OrderCommand}" Content="Оформить" FontSize="18" Height="30" Width="150" BorderBrush="#09D397" Background="#09D397" Foreground="White" Style="{DynamicResource AllBtns}"/>
+        <Button Grid.Row="2" Command="{Binding OrderCommand}" Content="Оформить" FontSize="18" Height="35" Cursor="Hand" Width="150" BorderBrush="#09D397" Background="#09D397" Foreground="White" Style="{DynamicResource AllBtns}"/>
     </Grid>
 </Window>

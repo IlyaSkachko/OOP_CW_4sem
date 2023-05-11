@@ -1,9 +1,11 @@
 ﻿using RentalCar.Commands;
 using RentalCar.DTO;
 using RentalCar.Model;
+using RentalCar.Repository;
 using RentalCar.View.MainPage;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data.Entity.Core.Objects.DataClasses;
 using System.Linq;
@@ -29,13 +31,24 @@ namespace RentalCar.ViewModel
         #endregion
 
         private ICommand openMainPageCommand;
+
         public ICommand OpenMainPageCommand { get => openMainPageCommand; }
+
+
+        public static ObservableCollection<CarItemModel> CarItems { get; set; }
+
 
         public ProfileViewModel()
         {
+            CarItems = new ObservableCollection<CarItemModel> { };
+            var rep = new RentalRepository();
+            CarItems = rep.GetRentalCar(AuthorizationViewModel.Login);
+
             Name = AuthorizationViewModel.Name; Passport = AuthorizationViewModel.Passport; CardNumber = AuthorizationViewModel.CardNumber; Login = AuthorizationViewModel.Login;
             openMainPageCommand = new RelayCommand(() => { Application.Current.MainWindow.Content = new MainPage(); });
+
         }
+
 
 
         public event PropertyChangedEventHandler PropertyChanged;
