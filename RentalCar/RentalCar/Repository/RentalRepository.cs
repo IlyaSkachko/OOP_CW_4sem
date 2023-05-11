@@ -10,9 +10,6 @@ namespace RentalCar.Repository
 {
     public class RentalRepository : IRentalRepository
     {
-        // пофиксить (не все ситуации обрабатывает)
-
-
         public bool CheckAvailableCar(int carID, DateTime date, int period)
         {
             using (var context = new MyDBContext())

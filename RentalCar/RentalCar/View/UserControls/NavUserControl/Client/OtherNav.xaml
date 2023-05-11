@@ -7,7 +7,7 @@
                           xmlns:viewModel="clr-namespace:RentalCar.ViewModel" d:DataContext="{d:DesignInstance Type=viewModel:MainPageViewModel}"
              mc:Ignorable="d" 
              d:Height="70" MinWidth="1100">
-<UserControl.Resources>
+    <UserControl.Resources>
     <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
     <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
     <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
@@ -86,6 +86,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 </UserControl.Resources>
+    <UserControl.DataContext>
+        <viewModel:ProfileViewModel/>
+    </UserControl.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -93,6 +96,7 @@
         </Grid.ColumnDefinitions>
 
         <Image x:Name="Logo" Grid.Column="0" Source="C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\LogoLight.png" HorizontalAlignment="Left" Margin="0,10,0,10" Width="194"/>
+        <Button Grid.Column="0" Command="{Binding OpenMainPageCommand}" Content="Главная" Width="100" Height="40" FontSize="25" Margin="130 0 0 0" Background="Transparent" BorderBrush="Transparent" />
         <Button Template="{DynamicResource ButtonTemplate1}" Command="{Binding OpenCommandProfile}" Width="70" Grid.Column="1" Margin="0 0 20 10" Background="Transparent" BorderBrush="#222" BorderThickness="1" HorizontalAlignment="Right">
             <Image  Width="60" Height="50">
                 <Image.Source>
