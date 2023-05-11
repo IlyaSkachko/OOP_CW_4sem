@@ -31,8 +31,8 @@ namespace RentalCar
         public MainWindow()
         {
             InitializeComponent();
-            //AuthorizationFrame.Content = new Authorization();
-            AuthorizationFrame.Content = new MainPage();
+            AuthorizationFrame.Content = new Authorization();
+            //AuthorizationFrame.Content = new MainPage();
 
             #region CreateDB
 

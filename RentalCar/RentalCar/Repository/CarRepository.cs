@@ -202,8 +202,9 @@ namespace RentalCar.Repository
 
         
 
-        private ObservableCollection<CarItemModel> ModelSearch(string model)
+        public ObservableCollection<CarItemModel> ModelSearch(string model)
         {
+            _carItems.Clear();
             using (var context = new MyDBContext())
             {
                 var regex = new Regex(model, RegexOptions.IgnoreCase);
@@ -282,6 +283,15 @@ namespace RentalCar.Repository
             return carItemModel;
         }
 
+        public int SearchCarID(CarItemModel car)
+        {
+            int id = 0;
+            using (var context = new MyDBContext())
+            {
+                id = context.Cars.Where(c => c.Model.Equals(car.Model)).Where(c => c.Class.Equals(car.CarClass)).First().Id;
+            }
 
+            return id;
+        }
     }
 }

@@ -46,3 +46,7 @@ C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\bin\Debug\net7.0-
 C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\RentalCar.csproj.CopyComplete
 C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\bin\Debug\net7.0-windows\WatermarkTextbox.dll
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\Profile\ProfileView.g.cs
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\Profile\ProfileView.baml
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\ModalWindow.g.cs
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\ModalWindow.baml

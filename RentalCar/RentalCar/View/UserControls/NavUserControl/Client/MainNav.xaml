@@ -4,9 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:RentalCar.View.NavUserControl"
-             xmlns:viewModel="clr-namespace:RentalCar.ViewModel"
+             xmlns:viewModel="clr-namespace:RentalCar.ViewModel" d:DataContext="{d:DesignInstance Type=viewModel:MainPageViewModel}"
              mc:Ignorable="d" 
-             d:Height="70" MinWidth="1100">
+             d:DesignHeight="70" d:DesignWidth="1100">
     <UserControl.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
@@ -86,18 +86,17 @@
             </ControlTemplate.Triggers>
         </ControlTemplate>
     </UserControl.Resources>
-    <UserControl.DataContext>
-        <viewModel:MainPageViewModel/>
-    </UserControl.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Image x:Name="Logo" Grid.Column="0" Source="C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\LogoLight.png" HorizontalAlignment="Left" Margin="0,10,0,10" Width="194"/>
-        <TextBox Style="{DynamicResource SearchField}" Text="{Binding SearchField}" VerticalContentAlignment="Center" FontSize="18" Padding="10 0 0 0"  Grid.Column="1" Height="35" Width="250" BorderBrush="#09D397" BorderThickness="2" VerticalAlignment="Bottom" Margin="0 0 150 20" HorizontalAlignment="Right" x:Name="SearchField" ></TextBox>
-        <Button Grid.Column="1" Content="Поиск" Width="70" Height="20" FontSize="16" HorizontalAlignment="Left"/>
-        <Button Template="{DynamicResource ButtonTemplate1}" Width="70" Grid.Column="1" Margin="0 0 20 10" Background="Transparent" BorderBrush="#222" BorderThickness="1" HorizontalAlignment="Right">
+        <WrapPanel Grid.Column="1" VerticalAlignment="Center">
+            <TextBox Style="{DynamicResource SearchField}" Text="{Binding SearchField}" VerticalContentAlignment="Center" FontSize="18" Padding="10 0 0 0"  Grid.Column="1" Height="35" Width="250" BorderBrush="#09D397" BorderThickness="2" VerticalAlignment="Bottom"  HorizontalAlignment="Left" x:Name="SearchField" ></TextBox>
+            <Button Content="Поиск"  Template="{DynamicResource ButtonTemplate1}" Command="{Binding SearchModelCommand}" Background="#09D397" BorderBrush="#09D397" Foreground="White" Width="70" Height="30" FontSize="16" Margin="10 0 0 0"/>
+        </WrapPanel>
+        <Button Template="{DynamicResource ButtonTemplate1}" Command="{Binding OpenProfileCommand}" Width="70" Grid.Column="1" Margin="0 0 20 10" Background="Transparent" BorderBrush="#222" HorizontalAlignment="Right" BorderThickness="1">
             <Image  Width="60" Height="50">
                 <Image.Source>
                     <BitmapImage UriSource="C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\avatar.png"/>

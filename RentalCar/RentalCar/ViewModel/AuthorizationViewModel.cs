@@ -1,5 +1,7 @@
 ﻿using RentalCar.Commands;
 using RentalCar.DataBase;
+using RentalCar.DTO;
+using RentalCar.Model;
 using RentalCar.View.MainPage;
 using RentalCar.View.Registration;
 using System;
@@ -18,12 +20,15 @@ namespace RentalCar.ViewModel
     public class AuthorizationViewModel : INotifyPropertyChanged
     {
 
+        public static string Name { get; private set; }
+        public static string Passport { get; private set; }
+        public static string CardNumber { get; private set; }
+        public static string Login { get; set; }
+
         private readonly ICommand _openRegistrationCommand;
         private readonly ICommand openMainPageCommand;
         private NavigationService _navigationService;
 
-
-        public string Login { get; set; }
         public string Password { get; set; }    
 
         public ICommand OpenRegistrationCommand
@@ -52,11 +57,12 @@ namespace RentalCar.ViewModel
             using (var context = new MyDBContext())
             {
                 var user = context.Profiles.Where(profile => profile.Login.Equals(Login)).FirstOrDefault();
-                if (user != null) 
+                if (user != null)
                 {
-                    if (user.Password == Password) 
+                    if (user.Password == Password)
                     {
                         Application.Current.MainWindow.Content = new MainPage();
+                        InitAccount(user);
                     }
                     else
                     {
@@ -67,6 +73,20 @@ namespace RentalCar.ViewModel
                 {
                     MessageBox.Show("Такого аккаунта не существует!");
                 }
+            }
+        }
+
+        private void InitAccount(Profile user)
+        {
+            using (var context = new MyDBContext())
+            {
+                UserModel us = new UserModel();
+                var profile = context.Users.Where(prof => prof.Id == user.Id).FirstOrDefault();
+                Login = user.Login;
+                Name = profile.Name;
+                CardNumber = profile.CardNumber;
+                Passport = profile.Passport;
+
             }
         }
 

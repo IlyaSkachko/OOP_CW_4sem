@@ -17,6 +17,8 @@ using RentalCar.Repository;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using RentalCar.Commands;
+using System.Windows;
+using RentalCar.View.Profile;
 
 namespace RentalCar.ViewModel
 {
@@ -27,16 +29,25 @@ namespace RentalCar.ViewModel
 
         private readonly ICommand searchCommand;
         private readonly ICommand resetCommand;
+        private readonly ICommand searchModelCommand;
+        private readonly ICommand openProfileCommand;
 
+
+        public ICommand OpenProfileCommand { get { return openProfileCommand; } }
         public ICommand SearchCommand { get => searchCommand; }
         public ICommand ResetCommand { get => resetCommand; }
+        public ICommand SearchModelCommand { get => searchModelCommand; }
+
 
         #endregion
+
+
+        #region Fields
 
         private CarRepository carRepository = new CarRepository();
 
         private string sliderValue = "50";
-        private string searchField = "Поиск";
+        private string searchField = "";
         private string powerField;
         private string modelSearch;
 
@@ -51,6 +62,12 @@ namespace RentalCar.ViewModel
         private bool sedanChecked;
         private bool convirtibleChecked;
 
+
+
+        #endregion
+
+
+        #region Properties
 
 
 
@@ -68,7 +85,9 @@ namespace RentalCar.ViewModel
         public bool OffroadChecked { get => offroadChecked; set { offroadChecked = value; OnPropertyChanged("OffroadChecked"); } }
         public bool SedanChecked { get => sedanChecked; set { sedanChecked = value; OnPropertyChanged("SedanChecked"); } }
 
-        public string ModelSearch { get => modelSearch; set { modelSearch = value; OnPropertyChanged("ModelSearch"); } }
+        #endregion
+
+
 
         public MainPageViewModel() 
         {
@@ -78,6 +97,26 @@ namespace RentalCar.ViewModel
 
             searchCommand = new ChangeCommand(Filter);
             resetCommand = new ChangeCommand(Reset);
+            searchModelCommand = new ChangeCommand(SearchModel);
+            openProfileCommand = new RelayCommand(OpenProfile);
+
+        }
+
+        private void OpenProfile()
+        {
+            Application.Current.MainWindow.Content = new ProfileView();
+        }
+
+        private void SearchModel()
+        {
+            CarItems.Clear();
+            var list = carRepository.ModelSearch(SearchField);
+
+            foreach(var item in list)
+            {
+                CarItems.Add(item);
+            }
+
         }
 
         private void Reset()
@@ -90,7 +129,6 @@ namespace RentalCar.ViewModel
             }
 
             SliderValue = "50";
-            SearchField = "Поиск";
             PowerField = null;
 
             ComfortChecked = false;

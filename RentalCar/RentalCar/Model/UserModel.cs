@@ -26,5 +26,7 @@ namespace RentalCar.Model
             this.passport = passport;
             this.cardNumber = cardNumber;
         }
+
+        public UserModel() { }
     }
 }

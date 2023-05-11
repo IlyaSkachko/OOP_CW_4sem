@@ -11,5 +11,8 @@ namespace RentalCar.Repository
     public interface ICarRepository
     {
         ObservableCollection<CarItemModel> Filter(string power, string price, string carBody, string carClass, string model);
+        ObservableCollection<CarItemModel> ModelSearch(string model);
+
+        int SearchCarID(CarItemModel car);
     }
 }

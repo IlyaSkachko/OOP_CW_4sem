@@ -28,7 +28,6 @@ namespace RentalCar.ViewModel
 
         public string Passport { get; set; }
         public string CardNumber { get; set; }
-        public string Birthday { get; set; }
         public string Login { get; set; }
 
 

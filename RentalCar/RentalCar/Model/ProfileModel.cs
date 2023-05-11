@@ -11,22 +11,30 @@ namespace RentalCar.Model
     public class ProfileModel
     {
 
-        private int id;
         private string login;
-        private string password;
-        private int userId;
-        public int Id { get {return id; } }
-        public string Password { get { return password; } }
-        public string Login { get { return login; } }
-        public int UserID { get { return userId; } }
+        private string name;
+        private string cardNumber;
+        private string passport;
 
+        public string Login { get => login; set => login = value; }
+        public string Name { get => name; set => name = value; }
+        public string CardNumber { get => cardNumber; set => cardNumber = value; }
+        public string Passport { get => passport; set => passport = value; }
 
-        public ProfileModel(int id, string password, string login, int userID)
+        public ProfileModel(string login = null, string name = null, string cardNumber = null, string passport = null)
         {
-            this.id = id;
-            this.password = password;
             this.login = login;
-            this.userId = userID;
+            this.name = name;
+            this.cardNumber = cardNumber;
+            this.passport = passport;
         }
+        public ProfileModel() 
+        {
+            this.login = "";
+            this.name = "";
+            this.cardNumber = "";
+            this.passport = "";
+        }
+
     }
 }

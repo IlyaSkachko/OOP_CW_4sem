@@ -1,0 +1,37 @@
+﻿<Page x:Class="RentalCar.View.Profile.ProfileView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RentalCar.View.Profile"
+      xmlns:nav="clr-namespace:RentalCar.View.UserControls.NavUserControl.Client"
+      xmlns:viewModel="clr-namespace:RentalCar.ViewModel" d:DataContext="{d:DesignInstance Type=viewModel:ProfileViewModel}"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="ProfileView">
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+    </Page.Resources>
+    <Page.DataContext>
+        <viewModel:ProfileViewModel/>
+    </Page.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="100"/>
+            <RowDefinition MaxHeight="300"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <nav:OtherNav Grid.Row="0" VerticalAlignment="Top" Margin="20 20 0 0"/>
+        <Border Grid.Row="1" Margin="20" Padding="20 10"  BorderThickness="2" BorderBrush="#09D397" CornerRadius="10">
+            <StackPanel>
+                <TextBlock Text="Информация" HorizontalAlignment="Center" FontSize="25"/>
+                <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" Margin="0 30 0 0"/>
+                <TextBlock Text="{Binding Passport}" HorizontalAlignment="Center" Margin="0 10 0 0"/>
+                <TextBlock Text="{Binding CardNumber}" HorizontalAlignment="Center" Margin="0 10 0 0"/>
+                <TextBlock Text="{Binding Login}" HorizontalAlignment="Center" Margin="0 10 0 0"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Page>

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using RentalCar.Commands;
+using RentalCar.Repository;
+using RentalCar.ViewModel;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +11,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace RentalCar.Model
 {
@@ -149,6 +153,14 @@ namespace RentalCar.Model
             hash.Add(carItems);
             hash.Add(CarItems);
             return hash.ToHashCode();
+        }
+
+        private readonly ICommand openModalCommand;
+        public ICommand OpenModalCommand { get => openModalCommand; }
+        public CarItemModel()
+        {
+
+            openModalCommand = new RelayCommand(() => { ModalWindowViewModel.CarID = new CarRepository().SearchCarID(this); new ModalWindow().ShowDialog(); });
         }
 
         private System.Collections.IEnumerable carItems;

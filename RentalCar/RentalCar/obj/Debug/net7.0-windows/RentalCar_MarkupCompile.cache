@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\App.xaml
-8-1379249735
+101541874441
 
-27-1402955583
+341064641675
 2032023147706
-MainWindow.xaml;View\Authorization\Authorization.xaml;View\Authorization\AuthorizationForm.xaml;View\MainPage\MainPage.xaml;View\Registration\RegistrationForm.xaml;View\Registration\RegistrationPage.xaml;View\UserControls\NavUserControl\Client\MainNav.xaml;View\UserControls\NavUserControl\Client\OtherNav.xaml;
+MainWindow.xaml;View\Authorization\Authorization.xaml;View\Authorization\AuthorizationForm.xaml;View\MainPage\MainPage.xaml;View\ModalWindow.xaml;View\Profile\ProfileView.xaml;View\Registration\RegistrationForm.xaml;View\Registration\RegistrationPage.xaml;View\UserControls\NavUserControl\Client\MainNav.xaml;View\UserControls\NavUserControl\Client\OtherNav.xaml;
 
 False
 

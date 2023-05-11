@@ -12,7 +12,7 @@
     </UserControl.DataContext>
     <Grid>
         <TextBlock Text="Регистрация" FontSize="25" HorizontalAlignment="Center"/>
-        <Grid Margin="0 36 0 0">
+        <Grid Margin="0 36 0 80">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
@@ -24,18 +24,17 @@
                 <TextBox x:Name="CardNumber" Text="{Binding CardNumber}" Style="{DynamicResource DataField}" BorderBrush="#09D397"  BorderThickness="1" Height="40"   FontSize="18" VerticalContentAlignment="Center"  Margin="0 13 0 0"/>
                 <TextBlock Text="Логин" FontSize="20" Margin="0 36 0 0"/>
                 <TextBox x:Name="Login" Text="{Binding Login}" Style="{DynamicResource DataField}" BorderBrush="#09D397"  BorderThickness="1" Height="40"   FontSize="18" VerticalContentAlignment="Center"  Margin="0 13 0 0"/>
-                <TextBlock Text="Подтвердите пароль" FontSize="20" Margin="0 36 0 0"/>
-                <TextBox Style="{DynamicResource DataField }" Text="{Binding PasswordAgain}" x:Name="PasswordAgain" VerticalContentAlignment="Center"  BorderBrush="#09D397"  BorderThickness="1"   Height="40"  FontSize="18" VerticalAlignment="Center" Margin="0 13 0 0"/>
             </StackPanel>
             <StackPanel Grid.Column="1" Margin="50 0 0 0" >
                 <TextBlock Text="Номер паспорта" FontSize="20" Margin="0 36 0 0"/>
                 <TextBox x:Name="Passport" Text="{Binding Passport}" Style="{DynamicResource DataField}" BorderBrush="#09D397"  BorderThickness="1" Height="40" FontSize="18" VerticalContentAlignment="Center"  Margin="0 13 0 0"/>
-                <TextBlock Text="Дата рождения" FontSize="20" Margin="0 36 0 0"/>
-                <TextBox x:Name="Birthday" Text="{Binding Birthday}" Style="{DynamicResource DataField}" BorderBrush="#09D397"  BorderThickness="1" Height="40"  FontSize="18" VerticalContentAlignment="Center"  Margin="0 13 0 0"/>
                 <TextBlock Text="Пароль" FontSize="20" Margin="0 36 0 0"/>
                 <TextBox Style="{DynamicResource DataField}" x:Name="Password" Text="{Binding Password}" VerticalContentAlignment="Center"  BorderBrush="#09D397"  BorderThickness="1" Height="40"  FontSize="18" VerticalAlignment="Center" Margin="0 13 0 0"/>
-                <Button Style="{DynamicResource AllBtns}" Command="{Binding RegistrationCommand}" Cursor="Hand"  x:Name="Register" Width="290" Height="40" BorderBrush="#09D397" Background="#09D397" HorizontalAlignment="Center" Foreground="White" Content="Зарегистрироваться" FontSize="20" Margin="0 80 0 0"/>
+                <TextBlock Text="Подтвердите пароль" FontSize="20" Margin="0 36 0 0"/>
+                <TextBox Style="{DynamicResource DataField }" Text="{Binding PasswordAgain}" x:Name="PasswordAgain" VerticalContentAlignment="Center"  BorderBrush="#09D397"  BorderThickness="1"   Height="40"  FontSize="18" VerticalAlignment="Center" Margin="0 13 0 0"/>
             </StackPanel>
+            
         </Grid>
+        <Button Style="{DynamicResource AllBtns}" Command="{Binding RegistrationCommand}" Cursor="Hand"  x:Name="Register" Width="290" Height="40" BorderBrush="#09D397" Background="#09D397" VerticalAlignment="Bottom" HorizontalAlignment="Center" Foreground="White" Content="Зарегистрироваться" FontSize="20" Margin="0 0 0 0"/>
     </Grid>
 </UserControl>
