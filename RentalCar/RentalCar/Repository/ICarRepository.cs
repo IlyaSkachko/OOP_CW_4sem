@@ -17,5 +17,6 @@ namespace RentalCar.Repository
         ObservableCollection<CarItemModel> SearchRentalCar(int carId);
 
         void DeleteCar(int carId);
+        void AddCar(CarItemModel car);
     }
 }

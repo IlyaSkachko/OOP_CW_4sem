@@ -1,5 +1,6 @@
 ﻿using RentalCar.Commands;
 using RentalCar.Repository;
+using RentalCar.View.MainPage;
 using RentalCar.ViewModel;
 using System;
 using System.Collections;
@@ -10,6 +11,7 @@ using System.Runtime.CompilerServices;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -26,7 +28,6 @@ namespace RentalCar.Model
         private string capacity;
         private string fuelConsumption;
         private string description;
-
 
         public string Capacity
         {
@@ -163,7 +164,7 @@ namespace RentalCar.Model
         private ICommand cancelOrderCommand;
         public CarItemModel()
         {
-            cancelOrderCommand = new OrderCommand(CancelOrder);
+            cancelOrderCommand = new OrderCommand(CancelOrder)  ;
             openModalCommand = new RelayCommand(() => { ModalWindowViewModel.CarID = new CarRepository().SearchCarID(this); new ModalWindow().ShowDialog(); });
             deleteCarCommand = new ChangeCommand(DeleteCar);
         }
@@ -172,9 +173,9 @@ namespace RentalCar.Model
         {
             var carRep = new CarRepository();
             carRep.DeleteCar(carRep.SearchCarID(this));
-            
+            Application.Current.MainWindow.Content = new MainPageAdmin();
         }
-
+        
         private void CancelOrder()
         {
             var rep = new RentalRepository();

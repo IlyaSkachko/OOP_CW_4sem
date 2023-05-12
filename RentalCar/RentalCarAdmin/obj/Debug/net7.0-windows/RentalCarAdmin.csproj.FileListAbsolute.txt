@@ -1,0 +1,3 @@
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCarAdmin\obj\Debug\net7.0-windows\RentalCarAdmin.csproj.AssemblyReference.cache
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCarAdmin\obj\Debug\net7.0-windows\App.g.cs
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCarAdmin\obj\Debug\net7.0-windows\RentalCarAdmin_MarkupCompile.cache

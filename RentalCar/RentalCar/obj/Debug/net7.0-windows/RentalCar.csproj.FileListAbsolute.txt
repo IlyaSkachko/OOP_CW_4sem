@@ -107,3 +107,9 @@ C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-
 C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\UserControls\NavUserControl\Admin\AdminMainNav.g.cs
 C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\MainPage\MainPageAdmin.baml
 C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\UserControls\NavUserControl\Admin\AdminMainNav.baml
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\AddCar\CarAddPage.g.cs
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\UserControls\NavUserControl\Admin\AdminOtherNav.g.cs
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\AddCar\CarAddPage.baml
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\UserControls\NavUserControl\Admin\AdminOtherNav.baml
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\UserControls\AddCarForm.g.cs
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\UserControls\AddCarForm.baml

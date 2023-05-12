@@ -1,6 +1,8 @@
 ﻿using RentalCar.Commands;
 using RentalCar.Model;
 using RentalCar.Repository;
+using RentalCar.View.AddCar;
+using RentalCar.View.MainPage;
 using RentalCar.View.Profile;
 using System;
 using System.Collections.Generic;
@@ -21,14 +23,17 @@ namespace RentalCar.ViewModel
         private readonly ICommand searchCommand;
         private readonly ICommand resetCommand;
         private readonly ICommand searchModelCommand;
+        private readonly ICommand openAddPage;
 
 
-
+        public ICommand OpenAddPage { get => openAddPage; }
         public ICommand SearchCommand { get => searchCommand; }
         public ICommand ResetCommand { get => resetCommand; }
         public ICommand SearchModelCommand { get => searchModelCommand; }
 
+        private ICommand openMainPageCommand;
 
+        public ICommand OpenMainPageCommand { get => openMainPageCommand; }
         #endregion
 
 
@@ -88,10 +93,14 @@ namespace RentalCar.ViewModel
             searchCommand = new ChangeCommand(Filter);
             resetCommand = new ChangeCommand(Reset);
             searchModelCommand = new ChangeCommand(SearchModel);
-
+            openAddPage = new RelayCommand(OpenAdd);
+            openMainPageCommand = new RelayCommand(() => { Application.Current.MainWindow.Content = new MainPageAdmin(); });
         }
 
-
+        private void OpenAdd()
+        {
+            Application.Current.MainWindow.Content = new CarAddPage();
+        }
 
         private void SearchModel()
         {

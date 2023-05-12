@@ -1,15 +1,7 @@
-﻿C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.i.cs
-FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\App.xaml;;
-FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\MainWindow.xaml;;
-FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\View\Authorization\Authorization.xaml;;
-FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\View\Authorization\AuthorizationForm.xaml;;
-FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\View\MainPage\MainPage.xaml;;
-FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\View\MainPage\MainPageAdmin.xaml;;
-FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\View\ModalWindow.xaml;;
-FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\View\Profile\ProfileView.xaml;;
-FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\View\Registration\RegistrationForm.xaml;;
-FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\View\Registration\RegistrationPage.xaml;;
+﻿
+
+FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\View\AddCar\CarAddPage.xaml;;
+FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\View\UserControls\AddCarForm.xaml;;
 FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\View\UserControls\NavUserControl\Admin\AdminMainNav.xaml;;
-FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\View\UserControls\NavUserControl\Client\MainNav.xaml;;
-FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\View\UserControls\NavUserControl\Client\OtherNav.xaml;;
+FC:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\View\UserControls\NavUserControl\Admin\AdminOtherNav.xaml;;
 

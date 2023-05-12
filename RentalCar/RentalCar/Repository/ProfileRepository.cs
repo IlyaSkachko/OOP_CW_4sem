@@ -14,7 +14,12 @@ namespace RentalCar.Repository
         {
             using (var context = new MyDBContext())
             {
-                var profile = context.Profiles.Where(profile => profile.Login.Equals(login)).FirstOrDefault().Id;
+                var profiles = context.Profiles.Where(profile => profile.Login.Equals(login)).FirstOrDefault();
+                if (profiles == null)
+                {
+                    return 0;
+                }
+                var profile = profiles.Id;
                 return profile;
             }
         }

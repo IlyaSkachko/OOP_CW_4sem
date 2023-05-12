@@ -92,8 +92,9 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Image x:Name="Logo" Grid.Column="0" Source="C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\LogoLight.png" HorizontalAlignment="Left" Margin="0,10,0,10" Width="194"/>
-        <Button Grid.Column="0" Content="Заявки"  Margin="120 0 0 0" Width="80" Height="35" FontSize="20" Background="Transparent" BorderBrush="Transparent" />
-        <Button Grid.Column="0" Content="Добавить"  Margin="350 0 0 0" Width="100" Height="35" FontSize="20" Background="Transparent" BorderBrush="Transparent" />
+        
+        <Button Command="{Binding OpenAddPage}" Grid.Column="0" Content="Добавить"  Margin="120 0 0 0" Width="120" Height="35" FontSize="25" Background="Transparent" BorderBrush="Transparent" />
+        <Button Grid.Column="0" Content="Заявки"  Margin="400 0 0 0" Width="100" Height="35" FontSize="25" Background="Transparent" BorderBrush="Transparent" />
         <WrapPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 0 30 0">
             <TextBox Style="{DynamicResource SearchField}" Text="{Binding SearchField}" VerticalContentAlignment="Center" FontSize="18" Padding="10 0 0 0"  Grid.Column="1" Height="35" Width="250" BorderBrush="#09D397" BorderThickness="2" VerticalAlignment="Bottom"  HorizontalAlignment="Left" x:Name="SearchField" ></TextBox>
             <Button Content="Поиск"  Template="{DynamicResource ButtonTemplate1}" Command="{Binding SearchModelCommand}" Background="#09D397" BorderBrush="#09D397" Foreground="White" Width="70" Height="30" FontSize="16" Margin="10 0 0 0"/>

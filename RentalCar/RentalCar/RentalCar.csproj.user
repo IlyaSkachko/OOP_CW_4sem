@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\AddCar\CarAddPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\MainPage\MainPageAdmin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -25,7 +28,13 @@
     <Compile Update="View\Profile\ProfileView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\UserControls\AddCarForm.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\UserControls\NavUserControl\Admin\AdminMainNav.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\UserControls\NavUserControl\Admin\AdminOtherNav.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\UserControls\NavUserControl\Client\MainNav.xaml.cs">
@@ -43,6 +52,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddCar\CarAddPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\MainPage\MainPageAdmin.xaml">
@@ -63,7 +75,13 @@
     <Page Update="View\Profile\ProfileView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\UserControls\AddCarForm.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\UserControls\NavUserControl\Admin\AdminMainNav.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\NavUserControl\Admin\AdminOtherNav.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\UserControls\NavUserControl\Client\MainNav.xaml">

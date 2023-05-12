@@ -281,7 +281,7 @@ namespace RentalCar.Repository
                 CarClass = item.Class,
                 Power = item.Power + " л.с.",
                 Price = item.Price + " BYN/сут.",
-                Image = @"C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\" + item.Photo,
+                Image = item.Photo,
                 Description = item.Description,
                 Capacity = "Вместимость: " + item.Capacity.ToString(),
                 FuelConsumption = item.FuelConsumption + "л/100 км"
@@ -343,6 +343,21 @@ namespace RentalCar.Repository
                 }
 
                
+            }
+        }
+
+        public void AddCar(CarItemModel car)
+        {
+
+            Car item = new Car() { Capacity = int.Parse(car.Capacity), CarBody = car.CarBody, Model = car.Model, Class = car.CarClass,
+                                    Description = car.Description, FuelConsumption = float.Parse(car.FuelConsumption), Photo = car.Image, Power = int.Parse(car.Power), 
+                                    Price = int.Parse(car.Price)};
+
+
+            using (var context = new MyDBContext()) 
+            {
+                context.Cars.Add(item);
+                context.SaveChanges();
             }
         }
     }
