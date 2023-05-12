@@ -102,3 +102,8 @@ C:\Users\ilyas\Downloads\OOP_CW_4sem-master\RentalCar\RentalCar\obj\Debug\net7.0
 C:\Users\ilyas\Downloads\OOP_CW_4sem-master\RentalCar\RentalCar\obj\Debug\net7.0-windows\RentalCar.pdb
 C:\Users\ilyas\Downloads\OOP_CW_4sem-master\RentalCar\RentalCar\obj\Debug\net7.0-windows\RentalCar.genruntimeconfig.cache
 C:\Users\ilyas\Downloads\OOP_CW_4sem-master\RentalCar\RentalCar\obj\Debug\net7.0-windows\ref\RentalCar.dll
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\RentalCar_Content.g.cs
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\MainPage\MainPageAdmin.g.cs
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\UserControls\NavUserControl\Admin\AdminMainNav.g.cs
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\MainPage\MainPageAdmin.baml
+C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\obj\Debug\net7.0-windows\View\UserControls\NavUserControl\Admin\AdminMainNav.baml

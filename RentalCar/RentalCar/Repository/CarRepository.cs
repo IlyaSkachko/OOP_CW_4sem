@@ -10,6 +10,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Documents;
 
 namespace RentalCar.Repository
@@ -86,6 +87,11 @@ namespace RentalCar.Repository
 
                 if (isParseComplete)
                 {
+                    if (isPrice && isPower && !isCarBody && isCarClass)
+                    {
+                        var list = context.Cars.Where(car => car.Price <= carPrice).Where(car => car.Power == carPower).Where(car => car.Class.Equals(carClass));
+                        Rewrite(list);
+                    }
                     if (!isPrice && isPower && !isCarBody && !isCarClass)
                     {
                         Power(carPower);
@@ -124,6 +130,7 @@ namespace RentalCar.Repository
                         var list = context.Cars.Where(car => car.Power == carPower).Where(car => car.Class.Equals(carClass)).Where(car => car.CarBody.Equals(carBody));
                         Rewrite(list);
                     }
+                    
                 }
 
                 if (!isPrice && !isPower && isCarBody && isCarClass)
@@ -310,6 +317,32 @@ namespace RentalCar.Repository
                     }
                 }
                 return carItems;
+            }
+        }
+
+        public void DeleteCar(int carId)
+        {
+            using (var context = new MyDBContext())
+            {
+                var rep = new RentalRepository();
+                
+                
+                if (!rep.CheckOrderByCarId(carId))
+                {
+                    var car = context.Cars.Where(car => car.Id == carId).SingleOrDefault();
+
+                    if (car != null)
+                    {
+                        context.Cars.Remove(car);
+                        context.SaveChanges();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Вы не можете удалить этот автомобиль так как она уже используется");
+                }
+
+               
             }
         }
     }

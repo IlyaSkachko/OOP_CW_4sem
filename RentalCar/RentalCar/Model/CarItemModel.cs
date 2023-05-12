@@ -156,14 +156,23 @@ namespace RentalCar.Model
         }
 
         private readonly ICommand openModalCommand;
+        private readonly ICommand deleteCarCommand;
         public ICommand OpenModalCommand { get => openModalCommand; }
-
+        public ICommand DeleteCarCommand { get => deleteCarCommand; }
         public ICommand CancelOrderCommand { get => cancelOrderCommand; }
         private ICommand cancelOrderCommand;
         public CarItemModel()
         {
             cancelOrderCommand = new OrderCommand(CancelOrder);
             openModalCommand = new RelayCommand(() => { ModalWindowViewModel.CarID = new CarRepository().SearchCarID(this); new ModalWindow().ShowDialog(); });
+            deleteCarCommand = new ChangeCommand(DeleteCar);
+        }
+
+        private void DeleteCar()
+        {
+            var carRep = new CarRepository();
+            carRep.DeleteCar(carRep.SearchCarID(this));
+            
         }
 
         private void CancelOrder()

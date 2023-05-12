@@ -53,7 +53,7 @@ namespace RentalCar.ViewModel
         }
 
         private void OpenMainPage()
-        {
+        { 
             using (var context = new MyDBContext())
             {
                 var user = context.Profiles.Where(profile => profile.Login.Equals(Login)).FirstOrDefault();
@@ -63,6 +63,18 @@ namespace RentalCar.ViewModel
                     {
                         Application.Current.MainWindow.Content = new MainPage();
                         InitAccount(user);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Неверно введён пороль!");
+                    }
+                }
+                else if (Login.Equals("admin"))
+                {
+                    if (Password == "12345678")
+                    {
+                        Application.Current.MainWindow.Content = new MainPageAdmin();
+                        InitAdmin();
                     }
                     else
                     {
@@ -88,6 +100,11 @@ namespace RentalCar.ViewModel
                 Passport = profile.Passport;
 
             }
+        }
+
+        private void InitAdmin()
+        {
+            Login = "admin";
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

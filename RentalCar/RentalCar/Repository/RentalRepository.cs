@@ -80,6 +80,20 @@ namespace RentalCar.Repository
             }
         }
 
+        public bool CheckOrderByCarId(int carId)
+        {
+            using (var context = new MyDBContext())
+            {
+                var list = context.RentalApplications.Where(order => order.CarID == carId);
+
+                if (list.Count() > 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
         public void CreateRentalApplication(int profileID, int carId, DateTime date, int period)
         {
             using (var context = new MyDBContext())
