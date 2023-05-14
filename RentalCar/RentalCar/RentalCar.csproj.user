@@ -25,6 +25,9 @@
     <Compile Update="View\MainPage\MainPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\Order\OrderPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Profile\ProfileView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -70,6 +73,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\MainPage\MainPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Order\OrderPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Profile\ProfileView.xaml">

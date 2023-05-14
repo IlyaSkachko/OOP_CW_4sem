@@ -17,6 +17,7 @@ namespace RentalCar.Repository
         ObservableCollection<CarItemModel> GetRentalCar(string login);
         void CancelOrder(string login);
 
+        bool IsOrderApproved(string login);
         bool CheckOrderByCarId(int carId);
     }
 }

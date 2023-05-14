@@ -98,7 +98,7 @@ namespace RentalCar.Repository
         {
             using (var context = new MyDBContext())
             {
-                var ren = new RentalApplications() { RentalPeriod = period, CarID = carId, ProfileID = profileID, DateRentalCar = date };
+                var ren = new RentalApplications() { RentalPeriod = period, CarID = carId, ProfileID = profileID, DateRentalCar = date, Status = "Ожидание" };
 
                 context.RentalApplications.Add(ren);
                 context.SaveChanges();
@@ -113,7 +113,6 @@ namespace RentalCar.Repository
                 var carRep = new CarRepository();
                 int carId = 0;
                 var profileId = profRep.SearchProfileId(login);
-                // фиксить здесь 
                 var rental = context.RentalApplications.Where(rental => rental.ProfileID == profileId).FirstOrDefault();
 
                 if (rental != null)
@@ -123,6 +122,27 @@ namespace RentalCar.Repository
                 return carRep.SearchRentalCar(carId);
             }
 
+        }
+
+        public bool IsOrderApproved(string login)
+        {
+            using (var context = new MyDBContext())
+            {
+                var profRep = new ProfileRepository();
+
+                var userID = profRep.SearchProfileId(login);
+
+                var user = context.RentalApplications.Where(rental => rental.ProfileID == userID).FirstOrDefault();
+
+                if (user != null)
+                {
+                    if (user.Status.Equals("Одобрено"))
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
         }
     }
 }

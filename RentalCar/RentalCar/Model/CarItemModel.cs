@@ -29,6 +29,8 @@ namespace RentalCar.Model
         private string fuelConsumption;
         private string description;
 
+
+
         public string Capacity
         {
             get => capacity;

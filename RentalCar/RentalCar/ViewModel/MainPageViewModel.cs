@@ -105,6 +105,11 @@ namespace RentalCar.ViewModel
         private void OpenProfile()
         {
             Application.Current.MainWindow.Content = new ProfileView();
+            var rentalRep = new RentalRepository();
+            if (rentalRep.IsOrderApproved(AuthorizationViewModel.Login))
+            {
+                MessageBox.Show("Вам одобрили заказ!");
+            }
         }
 
         private void SearchModel()

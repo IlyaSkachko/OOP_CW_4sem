@@ -13,6 +13,7 @@ namespace RentalCar.DTO
         public int CarID { get; set; }
         public DateTime DateRentalCar { get; set; }
         public int RentalPeriod { get; set; }
+        public string Status { get; set; }
 
         public virtual Profile Profile { get; set; }    
         public virtual Car Car { get; set; }

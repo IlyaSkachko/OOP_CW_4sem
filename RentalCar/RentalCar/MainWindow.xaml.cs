@@ -32,7 +32,6 @@ namespace RentalCar
         {
             InitializeComponent();
             AuthorizationFrame.Content = new Authorization();
-            //AuthorizationFrame.Content = new MainPage();
 
             #region CreateDB
 
@@ -42,28 +41,28 @@ namespace RentalCar
             //    {
             //        new Car() { Model = "BMW 5 G30", Capacity = 5, Class = "Бизнес", Color = "Чёрный", CarBody = "Седан",
             //                    Description = "Автомобиль с малым расходом топлива и шустрый, то что нужно для города", FuelConsumption=8.3f, Power = 300, Price=280,
-            //                    Photo=@"Cars\BMW5.jpeg"},
+            //                    Photo=@"C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\Cars\BMW5.jpeg"},
             //        new Car() { Model = "Volkswagen Polo", Capacity = 5, Class = "Эконом", Color = "Чёрный", CarBody = "Седан",
             //                    Description = "Экономичный и простой автомобиль", FuelConsumption=9.5f, Power = 90, Price=55,
-            //                    Photo=@"Cars\VWPolo.jpeg"},
+            //                    Photo=@"C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\Cars\VWPolo.jpeg"},
             //        new Car() { Model = "Volkswagen Eos", Capacity = 4, Class = "Комфорт", Color = "Белый", CarBody = "Кабриолет",
             //                    Description = "Летом в жару сказка", FuelConsumption=11f, Power = 140, Price=96,
-            //                    Photo=@"Cars\VWEos.jpeg"},
+            //                    Photo=@"C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\Cars\VWEos.jpeg"},
             //        new Car() { Model = "BMW 4 series", Capacity = 4, Class = "Комфорт", Color = "Чёрный", CarBody = "Кабриолет",
             //                    Description = "Летом в жару сказка", FuelConsumption=10f, Power = 250, Price=320,
-            //                    Photo=@"Cars\BMW4.jpeg"},
+            //                    Photo=@"C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\Cars\BMW4.jpeg"},
             //        new Car() { Model = "Audi Q7", Capacity = 5, Class = "Комфорт", Color = "Чёрный",
             //                    Description = "Большому дяде большая машина", FuelConsumption=12.4f, Power = 300, Price=355,
-            //                    Photo=@"Cars\AudiQ7.jpeg"},
+            //                    Photo=@"C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\Cars\AudiQ7.jpeg"},
             //        new Car() { Model = "Jeep Compass", Capacity = 5, Class = "Комфорт", Color = "Серый",
             //                    Description = "Большому дяде большая машина", FuelConsumption=15.4f, Power = 256, Price=280,
-            //                    Photo=@"Cars\JEEPCompass.jpeg"},
+            //                    Photo=@"C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\Cars\JEEPCompass.jpeg"},
             //        new Car() { Model = "Hyundai Staria", Capacity = 8, Class = "Комфорт", Color = "Белый",
             //                    Description = "Большой семье большой автомобиль", FuelConsumption=12.4f, Power = 256, Price=410,
-            //                    Photo=@"Cars\HyundaiStaria.jpeg"},
+            //                    Photo=@"C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\Cars\HyundaiStaria.jpeg"},
             //        new Car() { Model = "Citroen Grand Picasso", Capacity = 8, Class = "Комфорт", Color = "Белый",
             //                    Description = "Большой семье большой автомобиль", FuelConsumption=13.2f, Power = 190, Price=210,
-            //                    Photo=@"Cars\CitroenPicasso.jpeg"}
+            //                    Photo=@"C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\Cars\CitroenPicasso.jpeg"}
 
             //    };
 

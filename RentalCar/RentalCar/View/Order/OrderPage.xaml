@@ -1,0 +1,57 @@
+﻿<Page x:Class="RentalCar.View.Order.OrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RentalCar.View.Order"
+      xmlns:nav="clr-namespace:RentalCar.View.UserControls.NavUserControl.Admin"
+      xmlns:viewModel="clr-namespace:RentalCar.ViewModel"
+      xmlns:model="clr-namespace:RentalCar.Model" 
+      d:DataContext="{d:DesignInstance Type=model:OrderModel}"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="OrderPage">
+    <Page.DataContext>
+        <viewModel:OrderViewModel/>
+    </Page.DataContext>
+    <Page.Resources>
+        <Style TargetType="DataGrid">
+            
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <nav:AdminOtherNav Grid.Row="0" Margin="20 20 0 0"/>
+        <ScrollViewer Grid.Row="1" Margin="0 28 0 0" HorizontalScrollBarVisibility="Hidden">
+            <ListBox  Padding="20 0" BorderThickness="0" Background="Transparent" ItemsSource="{Binding OrderItems}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="400"/>
+                                <ColumnDefinition Width="400" />
+                                <ColumnDefinition Width="200" />
+                                <ColumnDefinition Width="200" />
+                            </Grid.ColumnDefinitions>
+                            <Border Grid.Column="0"  BorderBrush="#222" BorderThickness="2" Height="60">
+                                <TextBlock Text="{Binding Path=Model}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+                            </Border>
+                            <Border Grid.Column="1"  BorderBrush="#222" BorderThickness="2" Height="60">
+                                <TextBlock Text="{Binding Path=Login}"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 20 0 0 " FontSize="18"/>
+                            </Border>    
+                            <Border Grid.Column="2"  BorderBrush="#222" BorderThickness="2" Height="60">
+                                <Button Command="{Binding AcceptCommand}" Content="Принять" Style="{DynamicResource AllBtns}" Background="#09D397" Cursor="Hand" BorderBrush="#09D397" FontSize="18" Foreground="White" Height="45" Width="120"/>
+                            </Border>               
+                            <Border Grid.Column="3"  BorderBrush="#222" BorderThickness="2" Height="60">
+                                <Button Command="{Binding DeleteCommand}" Content="Отклонить" Style="{DynamicResource AllBtns}" Background="#09D397" Cursor="Hand" BorderBrush="#09D397" FontSize="18" Foreground="White" Height="45" Width="120"/>
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
+    </Grid>
+</Page>

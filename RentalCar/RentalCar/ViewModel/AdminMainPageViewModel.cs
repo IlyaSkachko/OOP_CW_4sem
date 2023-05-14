@@ -3,6 +3,7 @@ using RentalCar.Model;
 using RentalCar.Repository;
 using RentalCar.View.AddCar;
 using RentalCar.View.MainPage;
+using RentalCar.View.Order;
 using RentalCar.View.Profile;
 using System;
 using System.Collections.Generic;
@@ -24,8 +25,10 @@ namespace RentalCar.ViewModel
         private readonly ICommand resetCommand;
         private readonly ICommand searchModelCommand;
         private readonly ICommand openAddPage;
+        private readonly ICommand openOrderCommand;
 
 
+        public ICommand OpenOrderCommand { get => openOrderCommand; }
         public ICommand OpenAddPage { get => openAddPage; }
         public ICommand SearchCommand { get => searchCommand; }
         public ICommand ResetCommand { get => resetCommand; }
@@ -95,6 +98,7 @@ namespace RentalCar.ViewModel
             searchModelCommand = new ChangeCommand(SearchModel);
             openAddPage = new RelayCommand(OpenAdd);
             openMainPageCommand = new RelayCommand(() => { Application.Current.MainWindow.Content = new MainPageAdmin(); });
+            openOrderCommand = new RelayCommand(() => { Application.Current.MainWindow.Content = new OrderPage(); });
         }
 
         private void OpenAdd()

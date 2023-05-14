@@ -93,6 +93,6 @@
         <Image x:Name="Logo" Source="C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\LogoLight.png" HorizontalAlignment="Left" Margin="0,10,0,10" Width="194"/>
         <Button Grid.Column="0" Command="{Binding OpenMainPageCommand}" Margin="80 0 0 0" Content="Главная" Width="100" Height="40" FontSize="25" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent" />
         <Button Grid.Column="0" Content="Добавить" Command="{Binding OpenAddPage}" Margin="60 0 0 0" Height="40" Width="120" FontSize="25" Background="Transparent" HorizontalAlignment="Left" BorderBrush="Transparent"/>
-        <Button Grid.Column="0" Content="Заявки" Margin="60 0 0 0" Height="40" Width="100" FontSize="25" Background="Transparent" HorizontalAlignment="Left" BorderBrush="Transparent"/>
+        <Button Grid.Column="0" Content="Заявки" Command="{Binding OpenOrderCommand}" Margin="60 0 0 0" Height="40" Width="100" FontSize="25" Background="Transparent" HorizontalAlignment="Left" BorderBrush="Transparent"/>
     </WrapPanel>
 </UserControl>
