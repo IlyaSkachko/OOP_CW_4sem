@@ -8,7 +8,8 @@
         Icon="C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\icon.png"
         BorderBrush="#09D397" BorderThickness="0 2 0 0"
         Title="RentalCar" MinHeight="720" MinWidth="1280"
-    xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
+    xmlns:theme="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2"
+        Style="{DynamicResource WindowStyle}">
     <Window.Resources>
         <SolidColorBrush x:Key="Menu.Static.Foreground" Color="#FF212121"/>
         <MenuScrollingVisibilityConverter x:Key="MenuScrollingVisibilityConverter"/>

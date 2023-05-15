@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="RentalCar.ViewModel.AdminMainPageViewModel" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACALIEEICg1BCEotBShAIAgjCEABAggAASEAAAQBA=</HashCode>
+      <FileName>ViewModel\AdminMainPageViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RentalCar.ViewModel.AuthorizationViewModel" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAIAAIAAAAAAIBQAAAaAABAABgACAAAQAAAAAAA=</HashCode>
+      <FileName>ViewModel\AuthorizationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentalCar.ViewModel.BaseViewModel" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\BaseViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RentalCar.ViewModel.CarAddViewModel" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAARAAgAEQAwIAASIAIAAAACMAEBABCBCQgAgAAoEAA=</HashCode>
+      <FileName>ViewModel\CarAddViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentalCar.ViewModel.MainPageViewModel" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIACAKQEEICg1BCMoNBSBAAAgjCEAAAggAACEAAAQBA=</HashCode>
+      <FileName>ViewModel\MainPageViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RentalCar.ViewModel.ModalWindowViewModel" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAAAAAAIAAAAAKAgAACgAABAIAAAQAAAAA=</HashCode>
+      <FileName>ViewModel\ModalWindowViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentalCar.ViewModel.OrderViewModel" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAEAAAAAoAAAAAACgAAAAAAAAEAAAgAAAAA=</HashCode>
+      <FileName>ViewModel\OrderViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentalCar.ViewModel.ProfileViewModel" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAIAAAAAAAAAIBAAAAYAgAAAEAAAAAAQAAAAAAA=</HashCode>
+      <FileName>ViewModel\ProfileViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RentalCar.ViewModel.RegistrationViewModel" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgAAQAAAIADAAAAAIBAAIAAAgAAAAgQCAAAQCIAAABA=</HashCode>
+      <FileName>ViewModel\RegistrationViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

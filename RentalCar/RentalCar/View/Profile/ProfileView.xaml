@@ -61,7 +61,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition MaxHeight="100"/>
-            <RowDefinition MaxHeight="300"/>
+            <RowDefinition MaxHeight="335"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <nav:OtherNav Grid.Row="0" VerticalAlignment="Top" Margin="20 20 0 0"/>
@@ -72,9 +72,10 @@
                 <TextBlock Text="{Binding Passport}" HorizontalAlignment="Center" Margin="0 10 0 0"/>
                 <TextBlock Text="{Binding CardNumber}" HorizontalAlignment="Center" Margin="0 10 0 0"/>
                 <TextBlock Text="{Binding Login}" HorizontalAlignment="Center" Margin="0 10 0 0"/>
+                <Button Command="{Binding ExitAccountCommand}" Content="Выход" Style="{DynamicResource AllBtns}" Margin="0 20 0 0" Cursor="Hand" Background="#09D397" Foreground="White" BorderBrush="#09D397" Width="100" Height="40" FontSize="18"/>
             </StackPanel>
         </Border>
-        <ListBox Grid.Row="2" ItemsSource="{Binding CarItems}" Style="{DynamicResource ListBoxStyle}" Height="230" Padding="10" Margin="20 40 20 10" BorderThickness="2" BorderBrush="#09D397"  Background="Transparent" >
+        <ListBox Grid.Row="2" ItemsSource="{Binding CarItems}" Style="{DynamicResource ListBoxStyle}" Height="250" Padding="10" Margin="20 40 20 10" BorderThickness="2" BorderBrush="#09D397"  Background="Transparent" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>

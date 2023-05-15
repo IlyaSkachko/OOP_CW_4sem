@@ -16,7 +16,7 @@ using System.Windows.Controls;
 
 namespace RentalCar.ViewModel
 {
-    public class OrderViewModel : INotifyPropertyChanged
+    public class OrderViewModel : BaseViewModel
     {
 
 

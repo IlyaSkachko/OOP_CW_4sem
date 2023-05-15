@@ -17,7 +17,7 @@ using System.Windows.Input;
 
 namespace RentalCar.ViewModel
 {
-    public class AdminMainPageViewModel
+    public class AdminMainPageViewModel : INotifyPropertyChanged
     {
         #region Commands
 

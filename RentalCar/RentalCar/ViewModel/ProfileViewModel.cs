@@ -2,21 +2,24 @@
 using RentalCar.DTO;
 using RentalCar.Model;
 using RentalCar.Repository;
+using RentalCar.View;
 using RentalCar.View.MainPage;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data.Entity.Core.Objects.DataClasses;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 
 namespace RentalCar.ViewModel
 {
-    public class ProfileViewModel : INotifyPropertyChanged
+    public class ProfileViewModel : BaseViewModel, INotifyPropertyChanged
     {
 
 
@@ -31,9 +34,11 @@ namespace RentalCar.ViewModel
         #endregion
 
         private ICommand openMainPageCommand;
+        private ICommand exitAccountCommand;
+
 
         public ICommand OpenMainPageCommand { get => openMainPageCommand; }
-
+        public ICommand ExitAccountCommand { get => exitAccountCommand; }
 
         public static ObservableCollection<CarItemModel> CarItems { get; set; }
 
@@ -46,9 +51,25 @@ namespace RentalCar.ViewModel
 
             Name = AuthorizationViewModel.Name; Passport = AuthorizationViewModel.Passport; CardNumber = AuthorizationViewModel.CardNumber; Login = AuthorizationViewModel.Login;
             openMainPageCommand = new RelayCommand(() => { Application.Current.MainWindow.Content = new MainPage(); });
+            exitAccountCommand = new RelayCommand(() => { Application.Current.MainWindow.Content = new Authorization(); });
 
         }
 
+        private string CheckTheme()
+        {
+            string theme = File.ReadAllText(@"C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\theme.txt");
+            if (theme.Equals("Dark"))
+            {
+                theme = "Light";
+            }
+            else
+            {
+                theme = "Dark";
+                File.WriteAllText(@"C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\theme.txt", theme);
+            }
+
+            return theme;
+        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;

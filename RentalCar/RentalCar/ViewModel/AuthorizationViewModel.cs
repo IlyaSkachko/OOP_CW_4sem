@@ -17,7 +17,7 @@ using System.Windows.Navigation;
 
 namespace RentalCar.ViewModel
 {
-    public class AuthorizationViewModel : INotifyPropertyChanged
+    public class AuthorizationViewModel : BaseViewModel
     {
 
         public static string Name { get; private set; }
@@ -57,7 +57,7 @@ namespace RentalCar.ViewModel
             using (var context = new MyDBContext())
             {
                 var user = context.Profiles.Where(profile => profile.Login.Equals(Login)).FirstOrDefault();
-                if (user != null)
+                    if (user != null)
                 {
                     if (user.Password == Password)
                     {
@@ -69,16 +69,19 @@ namespace RentalCar.ViewModel
                         MessageBox.Show("Неверно введён пороль!");
                     }
                 }
-                else if (Login.Equals("admin"))
+                else if (Login != null)
                 {
-                    if (Password == "12345678")
+                    if (Login.Equals("admin"))
                     {
-                        Application.Current.MainWindow.Content = new MainPageAdmin();
-                        InitAdmin();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Неверно введён пороль!");
+                        if (Password == "12345678")
+                        {
+                            Application.Current.MainWindow.Content = new MainPageAdmin();
+                            InitAdmin();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Неверно введён пороль!");
+                        }
                     }
                 }
                 else
@@ -87,6 +90,8 @@ namespace RentalCar.ViewModel
                 }
             }
         }
+
+
 
         private void InitAccount(Profile user)
         {
@@ -107,15 +112,6 @@ namespace RentalCar.ViewModel
             Login = "admin";
         }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
 
-        protected void OnPropertyChanged(string propertyName)
-        {
-            var handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
     }
 }

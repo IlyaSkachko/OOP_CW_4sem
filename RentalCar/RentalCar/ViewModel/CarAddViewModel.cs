@@ -15,7 +15,7 @@ using System.Windows.Input;
 
 namespace RentalCar.ViewModel
 {
-    public class CarAddViewModel : INotifyPropertyChanged
+    public class CarAddViewModel : BaseViewModel
     {
 
         #region Commands
@@ -184,11 +184,5 @@ namespace RentalCar.ViewModel
             return false;
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName] string prop = "")
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
-        }
     }
 }

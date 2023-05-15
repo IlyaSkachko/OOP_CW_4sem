@@ -33,6 +33,7 @@ namespace RentalCar
             InitializeComponent();
             AuthorizationFrame.Content = new Authorization();
 
+
             #region CreateDB
 
             //using (var context = new MyDBContext())
@@ -75,5 +76,7 @@ namespace RentalCar
 
             #endregion
         }
+
+
     }
 }

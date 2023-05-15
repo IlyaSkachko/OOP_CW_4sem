@@ -16,7 +16,7 @@ using System.Windows.Navigation;
 
 namespace RentalCar.ViewModel
 {
-    public class RegistrationViewModel : INotifyPropertyChanged
+    public class RegistrationViewModel : BaseViewModel
     {
 
         private readonly ICommand _registrationCommand;
@@ -105,7 +105,7 @@ namespace RentalCar.ViewModel
                 }
                 else
                 {
-                    MessageBox.Show("Пороли не совпадают");
+                    MessageBox.Show("Пароли не совпадают");
                     return false;
                 }
             }
@@ -156,12 +156,16 @@ namespace RentalCar.ViewModel
                     }
                     else
                     {
-                        MessageBox.Show("Такой логин уже существует! Придумайте другой");
+                        MessageBox.Show("Аккаунт с таким логином уже существует! Придумайте другой");
                         return false;
                     }
                 }
             }
-            return false;
+            else
+            {
+                MessageBox.Show("Слишком короткий логин!");
+                return false;
+            }
         }
 
 

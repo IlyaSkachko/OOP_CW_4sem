@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace RentalCar.ViewModel
 {
-    public class ModalWindowViewModel : INotifyPropertyChanged
+    public class ModalWindowViewModel : BaseViewModel
     {
 
         private ICommand orderCommand;
