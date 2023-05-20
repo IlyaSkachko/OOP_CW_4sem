@@ -20,6 +20,7 @@ namespace RentalCar.ViewModel
     {
 
         private readonly ICommand _registrationCommand;
+        private readonly ICommand exitFormCommand;
 
 
         public string FIO { get; set; }
@@ -34,11 +35,16 @@ namespace RentalCar.ViewModel
         public ICommand RegistrationCommand
         {
             get { return _registrationCommand; }
+        }       
+        public ICommand ExitFormCommand
+        {
+            get { return exitFormCommand; }
         }
 
         public RegistrationViewModel()
         {
             _registrationCommand = new RelayCommand(Navigate);
+            exitFormCommand = new RelayCommand(() => { Application.Current.MainWindow.Content = new Authorization(); });
         }
 
         private void Navigate()
@@ -78,20 +84,28 @@ namespace RentalCar.ViewModel
             {
                 return true;
             }
-            return false;
+            else
+            {
+                MessageBox.Show("Введите корректные данные!");
+                return false;
+            }
         }
 
         private bool CheckFio()
         {
-            if (FIO.Length != null)
+            if (FIO != null)
             {
-                return true;
+                if (FIO.Length > 5)
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Неверный ввод ФИО");
+                    return false;
+                }
             }
-            else
-            {
-                MessageBox.Show("Неверный ввод ФИО");
-                return false;
-            }
+            return false;
 
         }
 

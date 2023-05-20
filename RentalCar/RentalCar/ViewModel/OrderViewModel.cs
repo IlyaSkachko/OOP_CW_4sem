@@ -32,15 +32,28 @@ namespace RentalCar.ViewModel
         {
             var orders = new ObservableCollection<OrderModel>();
 
-            var profiles = GetProfiles();
-            var cars = GetCars();
+            //var profiles = GetProfiles();
+            //var cars = GetCars();
 
-            if (profiles.Count > 0 && cars.Count() > 0) 
+            //if (profiles.Count > 0 && cars.Count() > 0) 
+            //{
+            //    for (var i = 0; i < profiles.Count(); i++)
+            //    {
+            //        orders.Add(GetOrder(cars[i].Model, profiles[i].Login));
+            //    }
+            //}
+
+            using (var context = new MyDBContext())
             {
-                for (var i = 0; i < profiles.Count(); i++)
+                var profiles = GetProfiles();
+
+                foreach (var item in profiles)
                 {
-                    orders.Add(GetOrder(cars[i].Model, profiles[i].Login));
+                    var carID = context.RentalApplications.Where(prof => prof.ProfileID == item.Id).FirstOrDefault().CarID;
+                    var car = context.Cars.Where(c => c.Id == carID).First().Model;
+                    orders.Add(GetOrder(car, item.Login));
                 }
+
             }
 
             return orders;

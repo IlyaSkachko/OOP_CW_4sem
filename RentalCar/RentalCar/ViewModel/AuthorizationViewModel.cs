@@ -53,12 +53,13 @@ namespace RentalCar.ViewModel
         }
 
         private void OpenMainPage()
-        { 
+        {
             using (var context = new MyDBContext())
             {
                 var user = context.Profiles.Where(profile => profile.Login.Equals(Login)).FirstOrDefault();
-                    if (user != null)
+                if (user != null)
                 {
+
                     if (user.Password == Password)
                     {
                         Application.Current.MainWindow.Content = new MainPage();
@@ -71,6 +72,10 @@ namespace RentalCar.ViewModel
                 }
                 else if (Login != null)
                 {
+                    if (Login == "")
+                    {
+                        MessageBox.Show("Заполните поля!");
+                    }
                     if (Login.Equals("admin"))
                     {
                         if (Password == "12345678")

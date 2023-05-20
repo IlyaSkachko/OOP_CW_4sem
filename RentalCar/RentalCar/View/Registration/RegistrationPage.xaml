@@ -4,16 +4,21 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:RentalCar.View.Registration"
+      xmlns:viewModel="clr-namespace:RentalCar.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="1000"
       Title="Регистрация">
-
+    <Page.DataContext>
+        <viewModel:RegistrationViewModel/>
+    </Page.DataContext>
     <Grid>
         <Grid.RowDefinitions>
                 <RowDefinition MaxHeight="70"/>
                 <RowDefinition/>
+                <RowDefinition MaxHeight="80"/>
             </Grid.RowDefinitions>
             <Image x:Name="Logo" Height="50" Source="C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\Images\LogoLight.png" HorizontalAlignment="Left" Margin="20 20 0 0"/>
         <local:RegistrationForm Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Width="918"/>
+        <Button Command="{Binding ExitFormCommand}" Content="Назад" Cursor="Hand" Grid.Row="2" Width="80" Height="30" VerticalAlignment="Top" Margin="0 0 0 0" FontSize="18" Background="Transparent" BorderBrush="Transparent"/>
     </Grid>
 </Page>

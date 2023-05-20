@@ -55,21 +55,6 @@ namespace RentalCar.ViewModel
 
         }
 
-        private string CheckTheme()
-        {
-            string theme = File.ReadAllText(@"C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\theme.txt");
-            if (theme.Equals("Dark"))
-            {
-                theme = "Light";
-            }
-            else
-            {
-                theme = "Dark";
-                File.WriteAllText(@"C:\Users\ilyas\Documents\UNIVER\CourseWork\RentalCar\RentalCar\theme.txt", theme);
-            }
-
-            return theme;
-        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;
